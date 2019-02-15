@@ -1,3 +1,18 @@
 body {
-    background-color: rgb(93, 68, 133);
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+img {
+    border-radius: 10px;
+}
+
+.form-inline {
+    justify-content: center;
+}
+
+audio {
+    display: flex;
+    justify-content: center;
 }

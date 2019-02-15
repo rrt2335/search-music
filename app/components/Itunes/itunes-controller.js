@@ -10,7 +10,7 @@ function drawSongs() {
     template += song.getTemplate();
   })
   document.getElementById('songs').innerHTML = template;
-  document.querySelector('#get-music-button').textContent = 'GET MUSIC'
+  document.querySelector('#get-music-button').textContent = 'Search music'
   console.log(itunesService.Songs)
 
 }
@@ -29,7 +29,7 @@ class ItunesController {
     e.preventDefault();
     var artist = e.target.artist.value;
     //changes the button to loading while songs load
-    document.querySelector('#get-music-button').textContent = 'LOADING....'
+    document.querySelector('#get-music-button').textContent = 'Searching...'
     itunesService.getMusicByArtist(artist)
   }
 }

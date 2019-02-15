@@ -46,10 +46,6 @@ Styling is a hard area to grade so at a bare minimum you will need to show your 
   - Functionality: 
     - A new search will clear out old results
 
-    
-
-
-
 
 ### BONUS CHALLENGES 
 - Clicking on the title should play the 30 second preview 
