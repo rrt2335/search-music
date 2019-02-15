@@ -9,10 +9,14 @@ img {
 }
 
 .form-inline {
+    align-content: center;
     justify-content: center;
 }
 
 audio {
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
+}
+
+h2 {
+    padding-top: 5px;
 }

@@ -7,6 +7,7 @@ export default class Song {
         this.collection = song.collectionName
         this.price = song.collectionPrice
         this.preview = song.previewUrl
+        this.title = song.trackName
     }
 
     getTemplate() {
@@ -14,12 +15,11 @@ export default class Song {
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card border-light bg-transparent m-2">
                 <div class="card-body">
-                <img src="${this.albumArt}" alt="Card image cap">
-                    <h2>${this.collection}</h2>
-                    <h3>${this.artist}</h3>
+                <img class="card-img-top" src="${this.albumArt}" alt="Card image cap">
+                    <h2>${this.title}</h2>
+                    <h4>${this.artist}</h4>
+                    <h5>${this.collection}</h5>
                     <h5>$${this.price}</h5>
-                    <ul id="song-list">
-                    </ul>
                     <audio controls>
                         <source src="${this.preview}" type="audio/mp3">
                     </audio>
