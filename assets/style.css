@@ -4,10 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-img {
-    border-radius: 10px;
-}
-
 .form-inline {
     align-content: center;
     justify-content: center;
