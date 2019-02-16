@@ -7,22 +7,33 @@ function drawSongs() {
   let songs = itunesService.Songs;
   let template = '';
   songs.forEach(song => {
-    template += song.getTemplate();
+    if (song.kind == "song"){
+      template += song.getTemplate();
+    }
   })
   document.getElementById('songs').innerHTML = template;
   document.querySelector('#get-music-button').textContent = 'Search music'
   console.log(itunesService.Songs)
-
 }
+
 
 // PUBLIC
 class ItunesController {
   constructor() {
-    //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
+    //BE SURE TO REGISTER YOUR SUBSCRIBERS!
     itunesService.addSubscriber('songs', drawSongs);
     drawSongs();
   }
+  
+  switchSong(event) {
+    console.log(event)
+    //alias the event.target
+    //get all of the audio tags from the dom
+    //iterate over all of the audio tags and compare this:
+      //if the target is the current iteration then play
+      //else pause()
 
+  }
 
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {

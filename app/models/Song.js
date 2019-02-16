@@ -5,9 +5,11 @@ export default class Song {
         this.albumArt = song.artworkUrl60.replace(/60x60/g, "250x250")
         this.artist = song.artistName
         this.collection = song.collectionName
-        this.price = song.collectionPrice
+        this.albumPrice = song.collectionPrice
+        this.price = song.trackPrice
         this.preview = song.previewUrl
         this.title = song.trackName
+        this.kind = song.kind
     }
 
     getTemplate() {
@@ -20,7 +22,8 @@ export default class Song {
                     <h4>${this.artist}</h4>
                     <h5>${this.collection}</h5>
                     <h5>$${this.price}</h5>
-                    <audio controls>
+                    <p>Album: $${this.albumPrice}</p>
+                    <audio onplay="app.controllers.itunesCtrl.switchSong(event)" controls>
                         <source src="${this.preview}" type="audio/mp3">
                     </audio>
                 </div>

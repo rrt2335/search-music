@@ -23,10 +23,10 @@ class ItunesService {
     var url = 'https://itunes.apple.com/search?callback=?&term=' + artist;
     // @ts-ignore
     $.getJSON(url)
-      .then(res => {
-        let results = res.results.map(s => new Song(s))
-        setState('songs', results)
-      })
+    .then(res => {
+      let results = res.results.map(s => new Song(s))
+      setState('songs', results)
+    })
       .catch(err => console.log(err))
   }
 
@@ -34,6 +34,7 @@ class ItunesService {
     _subscribers[prop].push(fn)
   }
 }
+
 
 
 
